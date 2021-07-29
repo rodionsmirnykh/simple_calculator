@@ -3,13 +3,13 @@ import 'package:function_tree/function_tree.dart';
 
 class AnswerLabel extends StatelessWidget {
   final String _input;
-  final signs = ['+', '-', '/', '*'];
+  static const _signs = ['+', '-', '/', '*'];
 
-  bool checkInput() {
-    if (signs.contains(_input.substring(_input.length - 1)))
-      return false;
-    else
+  bool isLastSign() {
+    if (_signs.contains(_input.substring(_input.length - 1)))
       return true;
+    else
+      return false;
   }
 
   AnswerLabel(this._input);
@@ -29,7 +29,7 @@ class AnswerLabel extends StatelessWidget {
               height: 10,
             ),
             Text(
-              checkInput() == true
+              isLastSign() == false
                   ? 'Answer: ' + _input.interpret().toString()
                   : 'Answer:',
               textAlign: TextAlign.left,

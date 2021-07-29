@@ -29,7 +29,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  String expression = '800/4';
+  String expression = '0';
 
   void addToExpression(String str) {
     setState(() {
@@ -67,7 +67,7 @@ class _HomePageState extends State<HomePage> {
           Numbers(addToExpression),
           Signs(addToExpression),
           RemoveButton('Remove', removeFromExpression),
-          RemoveButton('Remove all', removeAll),
+          RemoveButton('Clear', removeAll),
         ],
       ),
     );

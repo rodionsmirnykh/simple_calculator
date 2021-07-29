@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class RemoveButton extends StatelessWidget {
-  final String buttonLabel;
-  final Function buttonFunc;
-  RemoveButton(this.buttonLabel, this.buttonFunc);
+  final String _buttonLabel;
+  final Function _buttonFunc;
+  RemoveButton(this._buttonLabel, this._buttonFunc);
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +11,7 @@ class RemoveButton extends StatelessWidget {
       children: [
         Expanded(
             child: TextButton(
-                onPressed: () => buttonFunc(), child: Text(buttonLabel))),
+                onPressed: () => _buttonFunc(), child: Text(_buttonLabel))),
       ],
     );
   }

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:simple_calculator/widgets/buttons/calculator_button.dart';
+import 'package:simple_calculator/widgets/buttons/expression_button.dart';
 
 class Numbers extends StatelessWidget {
-  final Function f;
+  final Function _f;
 
-  Numbers(this.f);
+  Numbers(this._f);
 
-  List<CalculatorButton> get numberButtons {
-    return List.generate(10, (index) => CalculatorButton(index.toString(), f));
+  List<ExpressionButton> get numberButtons {
+    return List.generate(10, (index) => ExpressionButton(index.toString(), _f));
   }
 
   @override
